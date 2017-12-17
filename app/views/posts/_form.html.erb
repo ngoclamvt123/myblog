@@ -1,7 +1,7 @@
-<div class="form">
+<div class="form form-post">
   <%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :content %>
+    <%= f.input :title, required: true %>
+    <%= f.input :content, :input_html => { :rows => 14 }  %>
     <%= f.button :submit %>
   <% end %>
 </div>
