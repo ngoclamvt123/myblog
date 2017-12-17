@@ -16,7 +16,11 @@
   <hr class="hr-cmt">
 
   <div id="comments" class="comment-section">
-    <%= render "comments/form" %>
+    <% if user_signed_in? %>
+      <%= render "comments/form" %>
+    <% else %>
+      <p class="center">Please <%= link_to "Sign in", new_user_session_path %> or <%= link_to "Sign Up", new_user_registration_path %> to leave comment </p>
+    <% end %>
     <%= render "comments/comment", comment: @comments %>
   </div>
 </div>

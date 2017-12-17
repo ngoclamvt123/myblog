@@ -14,4 +14,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
+  namespace :api do
+    get 'posts', to: "posts#index"
+  end
+
 end
