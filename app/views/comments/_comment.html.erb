@@ -1,0 +1,10 @@
+<% comment.each do |c| %>
+<div class="panel panel-default panel-comment">
+    <div class="panel-body">
+      <p class="comment_name"><strong><%= c.user.name %>:</strong>
+        <%= c.content %>
+      </p>
+      <p class="comment_time"><%= time_ago_in_words(c.created_at) %> ago</p>
+    </div>
+  </div>
+<% end %>

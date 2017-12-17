@@ -1,0 +1,23 @@
+<div class="title-bar">  
+  <h2>Posts</h2>
+  <div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+      <%= params[:sort] == "asc" ? "Sort by: Oldest posts" : "Sort by: Newest posts" %>
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><%= link_to "Newest posts", posts_path %></li>
+      <li><%= link_to "Oldest posts", posts_path(sort: "asc") %></li>
+    </ul>
+  </div>
+</div>
+<% @posts.each do |post| %>
+  <div class="post">
+    <h2>
+      <%= link_to post.title, post %>
+    </h2>
+    <small>
+     <span class="green"><%= post.user.name %></span> &#183; <span class="italic"><%= post.created_at.strftime("%b %d %Y, %l:%M %P") %></span>
+    </small>
+  </div>
+<% end %>

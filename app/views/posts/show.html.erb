@@ -1,0 +1,23 @@
+<div class="content">
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <div class="post-info">
+    <small>
+      <span class="green"><%= @post.user.name %></span> &#183; <span class="italic"><%= @post.created_at.strftime("%b %d %Y, %l:%M %P") %></span>
+    </small>
+  </div>
+  <hr class="hr-content">
+  <p>
+    <%= @post.content %>
+  </p>
+  
+  <br/>
+  <hr class="hr-cmt">
+
+  <div id="comments" class="comment-section">
+    <%= render "comments/form" %>
+    <%= render "comments/comment", comment: @comments %>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+.hr-cmt{
+  width: 100%;
+  border-top: 1px solid #b5b5b5;
+}
+.comment-section{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.comment_content{
+  margin-bottom: 0;
+}
+.btn-cmt{
+  float: right;
+  margin-bottom: 10px;
+}
+.panel-comment{
+  position: relative;
+  .comment_time{
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .comment_name{
+    margin-top: 5px;
+  }
+}
