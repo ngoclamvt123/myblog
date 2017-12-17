@@ -10,11 +10,19 @@ body {
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.container{
-  padding-left: 150px;
-  padding-right: 150px;
+/*@media screen and (max-width: 480px) {
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
+@media screen and (min-width: 481px) {
+  .container{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}*/
+
 .navibar-default {
   background-color: #EFEFEB;
 }
