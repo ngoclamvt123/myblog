@@ -8,11 +8,6 @@ class Api::PostsController < ApplicationController
     end
       render json: posts, status: :ok
   end
-
-  
-
-  private
-  
   
 
 end
