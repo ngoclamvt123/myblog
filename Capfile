@@ -1,8 +1,4 @@
-require 'capistrano/bundler'
-require 'capistrano/rvm'
-require 'capistrano/rails/assets' # for asset handling add
-require 'capistrano/rails/migrations' # for running migrations
-require 'capistrano/puma'
+
 # Load DSL and set up stages
 require "capistrano/setup"
 
@@ -19,7 +15,11 @@ require "capistrano/deploy"
 # or
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
-
+require 'capistrano/bundler'
+require 'capistrano/rvm'
+require 'capistrano/rails/assets' # for asset handling add
+require 'capistrano/rails/migrations' # for running migrations
+require 'capistrano/puma'
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
