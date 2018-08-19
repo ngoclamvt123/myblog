@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.5.1"
+ruby "2.3.1"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -55,7 +55,7 @@ group :development do
   gem "capistrano3-puma"
   gem "capistrano-rails", require: false
   gem "capistrano-bundler", require: false
-  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-rvm'
 end
 
 group :production do
